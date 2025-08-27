@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Karaoke</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background particles -->
+  <div class="particles-bg">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+
+  <div class="container-fluid min-vh-100 d-flex align-items-center justify-content-center py-4">
+    <div class="karaoke-container">
+      <!-- Header -->
+      <div class="karaoke-header text-center mb-4">
+        <div class="logo-container">
+          <i class="fas fa-microphone-alt"></i>
+          <h1 class="logo-text">Modern Karaoke</h1>
+        </div>
+        <p class="subtitle">Trải nghiệm âm nhạc hiện đại</p>
+      </div>
+
+      <!-- Main Card -->
+      <div class="main-card">
+        <!-- Audio Player Section -->
+        <div class="audio-section">
+          <div class="audio-controls">
+            <button class="control-btn" id="playPauseBtn">
+              <i class="fas fa-play"></i>
+            </button>
+            <div class="audio-info">
+              <div class="song-title">Khoảng Lặng</div>
+              <div class="progress-container">
+                <div class="progress-bar">
+                  <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="time-display">
+                  <span id="currentTime">0:00</span>
+                  <span id="duration">0:00</span>
+                </div>
+              </div>
+            </div>
+            <div class="volume-control">
+              <i class="fas fa-volume-up"></i>
+              <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="70">
+            </div>
+          </div>
+          <audio id="audio" preload="metadata">
+            <source src="song.mp3" type="audio/mpeg">
+            Trình duyệt không hỗ trợ phát âm thanh.
+          </audio>
+        </div>
+
+        <!-- Lyrics Section -->
+        <div class="lyrics-section">
+          <div class="lyrics-header">
+            <i class="fas fa-music"></i>
+            <span>Lời bài hát</span>
+          </div>
+          <div id="lyrics" class="lyrics-container"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>
